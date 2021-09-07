@@ -34,6 +34,7 @@ const puppeteer = require("puppeteer");
     const { size, sizeId } = option;
     console.log(sizeId);
     await page.click(`label[data-product-attribute-value="${sizeId}"]`);
+    //page.screenshot({path:`size-${sizeId}.jpg`}) //Validar que se pueda clickear
   }
 
 
