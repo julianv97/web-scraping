@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  await page.goto("https://www.alumilite.com/dyes-colors/alumidust/");
+  await page.goto("https://www.alumilite.com/resins/amazing-clear-cast/");
 
   /**
    *** - Product Data
@@ -139,7 +139,7 @@ const puppeteer = require("puppeteer");
     product.bullets = bullets;
     product.itemGroupId = itemGroupId;
     product.size = variant.size;
-    product.color = variant.color;
+    product.color = variant.color ? variant.color : 'Color Único'
     product.options = variant.options;
     product.images = variant.image;
     product.avaibility = variant.hasStock;
