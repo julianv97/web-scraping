@@ -143,6 +143,7 @@ const puppeteer = require("puppeteer");
     product.options = variant.options;
     product.images = variant.image;
     product.avaibility = variant.hasStock;
+    product.price = variant.price;
     product.currency = "USD";
 
     return product;
